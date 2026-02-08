@@ -81,12 +81,6 @@ function setAuthorOfTheDay() {
 setAuthorOfTheDay();
 
 
-/* =========================
-   3) NEWSLETTER (LocalStorage)
-   Save the email so it "remembers" you
-========================= */
-
-
 
 /* =========================
    4) HAMBURGER MENU (Mobile)
