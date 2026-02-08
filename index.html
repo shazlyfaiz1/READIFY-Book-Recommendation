@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>READIFY | Home</title>
+
+  <!-- Link the CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =========================
+       NAVBAR (Top Menu)
+  ========================== -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="Logo.png" alt="READIFY Logo" class="logo" />
+      <span class="brand">READIFY</span>
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="book-explorer.html">Book Explorer</a>
+      <a href="progress-tracker.html">Progress Tracker</a>
+      <a href="recommender.html">Recommender</a>
+      <a href="reading-flow.html">Reading Flow</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="tagline">Your Cozy Reading Corner</p>
+
+      <h1 class="hero-title">
+        Discover Your Next <span class="highlight">Great Read</span>
+      </h1>
+
+      <p class="quote" id="quoteText">
+        "A room without books is like a body without a soul."
+      </p>
+
+      <p class="quote-author" id="quoteAuthor">
+        — Marcus Tullius Cicero
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-gold" href="book-explorer.html">Explore Books →</a>
+        <a class="btn btn-outline" href="recommender.html">Get Recommendations</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img id="heroSlide" src="images/hero1.jpg" alt="Reading image" class="hero-img">
+    </div>
+  </section>  
+
+ 
+ 
+
+    <!-- =========================
+         AUTHOR OF THE DAY
+    ========================== -->
+    <section class="author-section">
+      <p class="featured">✨ Featured Daily</p>
+      <h2>Author of the Day</h2>
+
+      <div class="author-card">
+        <div class="author-avatar" id="authorAvatar">📚</div>
+
+        <div class="author-info">
+          <h3 id="authorName">J.R.R. Tolkien</h3>
+          <p class="author-meta" id="authorMeta">Born 1892 • Most Famous: The Lord of the Rings</p>
+          <p class="author-desc" id="authorDesc">
+            English writer and philologist, best known for The Hobbit and The Lord of the Rings trilogy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <div class="footer-logo-row">
+        <img src="logo.png" class="footer-logo" alt="Readify Logo">
+        <span class="footer-name">READIFY</span>
+      </div>
+      <p class="footer-desc">
+        A simple reading platform for book lovers — explore, save, and track your reading.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="book-explorer.html">Book Explorer</a>
+      <a href="progress-tracker.html">Progress Tracker</a>
+      <a href="recommender.html">Recommender</a>
+      <a href="reading-flow.html">Reading Flow</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p class="footer-desc">Get new book picks (stored in your browser).</p>
+
+      <form class="footer-form" id="newsletterForm">
+        <input id="newsletterEmail" type="email" placeholder="Enter your email" required>
+        <button class="footer-btn" type="submit">Subscribe</button>
+      </form>
+
+      <p class="footer-note" id="newsletterMsg"></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Readify. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

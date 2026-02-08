@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>READIFY | Progress Tracker</title>
+  <link rel="stylesheet" href="progress-tracker.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="Logo.png" alt="READIFY logo" class="logo" />
+      <span class="brand">READIFY</span>
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="book-explorer.html">Book Explorer</a>
+      <a class="active" href="progress-tracker.html">Progress Tracker</a>
+      <a href="recommender.html">Recommender</a>
+      <a href="reading-flow.html">Reading Flow</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- TITLE -->
+  <section class="page-title">
+    <p class="mini-title">Track Progress</p>
+    <h1>Reading Progress Tracker</h1>
+  </section>
+
+  <!-- TWO CARDS -->
+  <main class="wrap">
+    <!-- LEFT CARD -->
+    <section class="card">
+      <h2>Enter Your Reading Details</h2>
+
+      <form id="trackerForm" class="form">
+        <div class="field">
+          <label for="bookTitle">Book Title</label>
+          <input id="bookTitle" type="text" placeholder="e.g., The Great Gatsby" required />
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="totalPages">Total Pages</label>
+            <input id="totalPages" type="number" min="1" placeholder="300" required />
+          </div>
+
+          <div class="field">
+            <label for="pagesRead">Pages Read</label>
+            <input id="pagesRead" type="number" min="0" placeholder="75" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="speed">Daily Reading Speed (pages/day)</label>
+          <input id="speed" type="number" min="1" placeholder="30" required />
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn gold" id="calcBtn">Calculate Progress</button>
+          <button type="button" class="btn outline" id="saveBtn">Save</button>
+        </div>
+
+        <p class="msg" id="msg"></p>
+      </form>
+    </section>
+
+    <!-- RIGHT CARD -->
+    <section class="card">
+      <h2>Your Progress</h2>
+
+      <div class="progress-box" id="progressBox">
+        <div class="placeholder" id="placeholder">
+          <div class="big-icon">📚</div>
+          <p>Enter your reading details to see your progress</p>
+        </div>
+
+        <!-- Results -->
+        <div class="results" id="results">
+          <h3 id="rTitle">Book Title</h3>
+
+          <p class="line"><strong>Pages:</strong> <span id="rPages">0/0</span></p>
+          <p class="line"><strong>Progress:</strong> <span id="rPercent">0%</span></p>
+
+          <div class="bar">
+            <div class="fill" id="fillBar"></div>
+          </div>
+
+          <p class="line"><strong>Remaining Pages:</strong> <span id="rRemaining">0</span></p>
+          <p class="line"><strong>Estimated Days Left:</strong> <span id="rDaysLeft">0</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+ <footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <div class="footer-logo-row">
+        <img src="logo.png" class="footer-logo" alt="Readify Logo">
+        <span class="footer-name">READIFY</span>
+      </div>
+      <p class="footer-desc">
+        A simple reading platform for book lovers — explore, save, and track your reading.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="book-explorer.html">Book Explorer</a>
+      <a href="progress-tracker.html">Progress Tracker</a>
+      <a href="recommender.html">Recommender</a>
+      <a href="reading-flow.html">Reading Flow</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p class="footer-desc">Get new book picks (stored in your browser).</p>
+
+      <form class="footer-form" id="newsletterForm">
+        <input id="newsletterEmail" type="email" placeholder="Enter your email" required>
+        <button class="footer-btn" type="submit">Subscribe</button>
+      </form>
+
+      <p class="footer-note" id="newsletterMsg"></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Readify. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="progress-tracker.js"></script>
+</body>
+</html>

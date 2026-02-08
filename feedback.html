@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>READIFY | Feedback</title>
+  <link rel="stylesheet" href="feedback.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="Logo.png" alt="READIFY logo" class="logo" />
+      <span class="brand">READIFY</span>
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="book-explorer.html">Book Explorer</a>
+      <a href="progress-tracker.html">Progress Tracker</a>
+      <a href="recommender.html">Recommender</a>
+      <a href="reading-flow.html">Reading Flow</a>
+      <a class="active" href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- TITLE -->
+  <section class="page-title">
+    <p class="mini-title">💬 Get in Touch</p>
+    <h1>Feedback</h1>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="wrap">
+    <!-- LEFT: FORM -->
+    <section class="card">
+      <h2>Send Us a Message</h2>
+
+      <form id="feedbackForm" class="form">
+        <div class="field">
+          <label for="name">Name *</label>
+          <input id="name" type="text" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email *</label>
+          <input id="email" type="email" required />
+        </div>
+
+        <div class="field">
+          <label for="message">Message *</label>
+          <textarea id="message" rows="7" required></textarea>
+        </div>
+
+        <button class="btn gold" type="submit">Send Feedback</button>
+        <p class="msg" id="formMsg"></p>
+      </form>
+    </section>
+
+    <!-- RIGHT: FAQ -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list" id="faqList">
+        <!-- FAQ items are written in HTML for simplicity -->
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            How do I track my reading progress?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            Use the Progress Tracker page. Enter your book details and click “Calculate Progress” or “Save”.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            Can I save my reading list?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            Yes. Book Explorer saves your reading list in your browser using localStorage.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            How does the Book Recommender work?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            You choose a genre and length, then the site picks a random book from a small list that matches.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            What is the Reading Flow timer for?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            It helps you focus by using a simple “focus + break” timer while you read.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            Is my data saved?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            Data is saved only on your device (localStorage). It doesn’t send anything to a real server.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- FOOTER -->
+  <footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <div class="footer-logo-row">
+        <img src="logo.png" class="footer-logo" alt="Readify Logo">
+        <span class="footer-name">READIFY</span>
+      </div>
+      <p class="footer-desc">
+        A simple reading platform for book lovers — explore, save, and track your reading.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="book-explorer.html">Book Explorer</a>
+      <a href="progress-tracker.html">Progress Tracker</a>
+      <a href="recommender.html">Recommender</a>
+      <a href="reading-flow.html">Reading Flow</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p class="footer-desc">Get new book picks (stored in your browser).</p>
+
+      <form class="footer-form" id="newsletterForm">
+        <input id="newsletterEmail" type="email" placeholder="Enter your email" required>
+        <button class="footer-btn" type="submit">Subscribe</button>
+      </form>
+
+      <p class="footer-note" id="newsletterMsg"></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Readify. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="feedback.js"></script>
+</body>
+</html>
